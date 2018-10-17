@@ -1,6 +1,6 @@
 require "test_helper"
 
-class LgrgicPalindromeDetectorTest < Minitest::Test
+class MhartlPalindromeTest < Minitest::Test
 
   def test_non_palindrome
     refute "apple".palindrome?
@@ -16,5 +16,13 @@ class LgrgicPalindromeDetectorTest < Minitest::Test
 
   def test_palindrome_with_punctuation
     assert "Madam, I'm Adam.".palindrome?
+  end
+
+  def test_integer_non_palindrome
+    refute 12345.palindrome?
+  end
+
+  def test_integer_palindrome
+    assert 12321.palindrome?
   end
 end
